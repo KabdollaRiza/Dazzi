@@ -1,0 +1,114 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial 
+scale=1.0">  
+<title>Login</title>  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="newstyle.css"> 
+</head> 
+<body>
+   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="Home.html">
+        <img src="logo1.png" alt="Logo" style="height:80px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-4">
+          <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="allofusaredead.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="Help.html">Help</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="Quiz.html" id="quizDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Quiz</a>
+          <ul class="dropdown-menu" aria-labelledby="quizDropdown">
+           <li><a class="dropdown-item" href="#">Actors</a></li>
+           <li><a class="dropdown-item" href="#">K-dramas</a></li>
+           <li><hr class="dropdown-divider"></li>
+           </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+        <a class="btn btn-outline-danger me-3" href="Login.html" role="button">Log in</a>
+      </div>
+    </div>
+  </nav>
+<a href="Home.html"><img src="logo1.png" style="height: 80px;" class="img-fluid rounded mx-auto d-block"></a>
+  <section class="section_login">
+      <div class="container mt-5 pt-5">
+        <div class="row">
+          <div class="col-12 col-sm-7 col-md-6 m-auto">
+            <div class="card border-0 shadow">
+              <div class="card-body">
+                <div class="d-flex justify-content-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+            </div>
+                <form id="login-form">
+    <input type="text" id="username" class="form-control my-4 py-2" placeholder="Username" required />
+    <input type="password" id="password" class="form-control my-4 py-2" placeholder="Password" required />
+    <div class="text-center mt-3">
+        <button type="submit" class="btn btn-outline-danger">Login</button>
+        <a href="Signup.html" class="nav-link">Don't have an account?</a>
+    </div>
+    <p id="error-message" class="text-danger"></p>
+</form>
+ <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+
+            const user = users.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                window.location.href = "Home.html";
+            } else {
+                document.getElementById("error-message").textContent = "Invalid username or password.";
+            }
+        });
+    </script>
+     
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<footer>
+  <div class="container text-center">
+  <div class="container-header fs-4 fw-medium">DazZI</div>
+
+  <div class="row align-items-start">
+    <div class="col-sm-6">
+      <p class="fw-medium border border-black w-25 mx-auto">Social Media</p>
+      <div class="container-body">
+      <a href="https://www.tiktok.com/en/"><img class="rounded-circle me-3" src="tiktok-icon2.png" height="50"></a>
+      <a href="https://www.instagram.com/"><img class="rounded-circle ms-3" src="inst.png" height="60"> </a></div>
+    </div>
+    <div class="col-sm-6">
+      <p class="fw-medium border border-black w-25 mx-auto">Contact Us</p>
+      <div class="container-body">
+      <a href="#"><img class="rounded-circle me-3" src="call.png" height="60"></a>
+      <a href="https://mail.ru/"><img class="rounded-circle ms-3" src="images.png" height="60"> </a></div>
+    </div>
+    </div>
+      <div class="card-footer fs-5 fw-medium">Kabdolla Riza, Abdukhamitova Dinara</div>
+  </div>
+</footer>
+<script src="admin_panel.js"></script>
+</body>
+</html>
