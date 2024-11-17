@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DazZI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="newstyle.css">
+  </head>
+<body>  
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="Home.html">
+        <img src="logo1.png" alt="Logo" style="height:80px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-underline justify-content-center flex-grow-1 pe-4">
+          <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="allofusaredead.html">News</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Help.html">Help</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="Quiz.html" id="quizDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Quiz</a>
+          <ul class="dropdown-menu" aria-labelledby="quizDropdown">
+           <li><a class="dropdown-item" href="#">Actors</a></li>
+           <li><a class="dropdown-item" href="#">K-dramas</a></li>
+           <li><hr class="dropdown-divider"></li>
+           </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+        <a class="btn btn-outline-danger me-3" href="Login.html" role="button">Log in</a>
+      </div>
+    </div>
+  </nav>
+<main class="main_help">
+    <h1 class="text-center">Mostly asked questions</h1>
+    <div class="col1 border border-light rounded border-3 mx-auto w-75">
+      <p class="text-center fw-medium ">1.How to sign up?</p>
+      <p class="text-center fw-medium"> Click the sign up button on the navigation bar.</p>
+      </div>
+    <div class="col1 border border-light rounded border-3 mx-auto w-75">
+      <p class="text-center fw-medium">2.How to deoctivate my account?</p>
+      <p class="text-center fw-medium">You can not deoctivate your account</p>
+  </div>
+  <div class="col1 border border-light rounded border-3 mx-auto w-75">
+      <p class="text-center fw-medium">3.Can I provide feedback or make a complaint through your contact information?</p>
+      <p class="text-center fw-medium">We are working with this problem</p>
+  </div>
+  <div class="col1 border border-light rounded border-3 mx-auto w-75">
+      <p class="text-center fw-medium">4.Can I request assistance in a language other than English?</p><p class="text-center fw-medium">We are working with this problem.</p>
+  </div>
+  <div class="col1 border border-light rounded border-3 mx-auto w-75">
+      <p class="text-center fw-medium">5.Is there a specific email address for technical support?</p>
+        <p class="text-center fw-medium">Yes, you can find it in the end of the website.
+  </div>
+
+  <form onsubmit="showAllert();">
+    <input type="text" class="mx-auto w-25 form-control my-4 py-2" placeholder="Enter your question..." />
+  <div class="text-center">
+  <button class="btn btn-outline-danger">Send</button>
+  </div>
+  <script type="text/javascript">
+    function showAllert(){
+      alert("Thank you for your question!")
+    }
+  </script>
+</form>
+</main>
+
+<footer>
+  <div class="container text-center">
+  <div class="container-header fs-4 fw-medium">DazZI</div>
+
+  <div class="row align-items-start">
+    <div class="col-sm-6">
+      <p class="fw-medium border border-black w-25 mx-auto">Social Media</p>
+      <div class="container-body">
+      <a href="https://www.tiktok.com/en/"><img class="rounded-circle me-3" src="tiktok-icon2.png" height="50"></a>
+      <a href="https://www.instagram.com/"><img class="rounded-circle ms-3" src="inst.png" height="60"> </a></div>
+    </div>
+    <div class="col-sm-6">
+      <p class="fw-medium border border-black w-25 mx-auto">Contact Us</p>
+      <div class="container-body">
+      <a href="#"><img class="rounded-circle me-3" src="call.png" height="60"></a>
+      <a href="https://mail.ru/"><img class="rounded-circle ms-3" src="images.png" height="60"> </a></div>
+    </div>
+    </div>
+      <div class="card-footer fs-5 fw-medium">Kabdolla Riza, Abdukhamitova Dinara</div>
+  </div>
+</footer>
+</div>
+</body> 
+</html>
